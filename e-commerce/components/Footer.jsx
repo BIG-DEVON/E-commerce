@@ -8,8 +8,10 @@ const Footer = () => {
     <p>@2022 Devon All rights reserved. </p>
     <p className='icons'>
 
-    <AiFillInstagram />
     
+      <a href='https://www.instagram.com/accounts/login/'> 
+    <AiFillInstagram />
+    </a>
     <a href='https://twitter.com/Devon5335'>
     <AiOutlineTwitter />
      </a>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link'
-import{ AiOutlineShopping, AiOutlineShop }  from 'react-icons/ai';
+import{ AiOutlineShopping, AiOutlineShop, AiOutlineShoppingCart }  from 'react-icons/ai';
 
 
 
@@ -16,6 +16,8 @@ const Navbar = () => {
     className='cart-icon'
     onClick="">
     <AiOutlineShopping/>
+    
+
     <span className='cart-item-qty'> 1</span>
      </button>
     </div>
