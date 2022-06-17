@@ -1,5 +1,6 @@
 import React from 'react';
 import { AiFillInstagram , AiOutlineTwitter } from 'react-icons/ai';
+import { AiFillGithub } from 'react-icons/ai';
 
 const Footer = () => {
   return (
@@ -8,7 +9,10 @@ const Footer = () => {
     <p className='icons'>
 
     <AiFillInstagram />
+    
+    <a href='https://twitter.com/Devon5335'>
     <AiOutlineTwitter />
+     </a>
 
     </p>
     
