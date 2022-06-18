@@ -1,8 +1,13 @@
 import React from 'react'
+import { urlFor, client  } from '../lib/client';
 
-const Cart = () => {
+
+const Cart = ({}) => {
   return (
-    <div>Cart</div>
+    <div>
+    
+    
+    </div>
   )
 }
 
