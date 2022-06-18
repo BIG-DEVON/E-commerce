@@ -1,4 +1,5 @@
 import React from 'react'
+import { urlFor } from '../lib/client'
 
 import { Layout } from '../components'
 import '../styles/globals.css'
