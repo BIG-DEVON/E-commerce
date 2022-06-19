@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import {client, urlFor} from '../../lib/client'
 import { AiOutlineMinus  , AiOutlinePlus, AiOutlineStar, AiFillStar } from 'react-icons/ai';
 import { AiFillLinkedin } from 'react-icons/ai';
-import { AiFillGithub } from 'react-icons/ai';
+
 
 import {Product} from '../../components';
 
@@ -20,7 +20,6 @@ const ProductDetails = ({product, products}) =>
 
     
 
-
     <div> 
     <div className='product-detail-container'> 
         <div>
@@ -36,7 +35,7 @@ const ProductDetails = ({product, products}) =>
             {image?.map((item, i ) => ( 
                 <img
                 src={urlFor(item)}
-                className={i === index ?'small-image selected-image' :
+                className={i === index ? 'small-image selected-image' :
                 'small-image'
                 }
                 onMouseEnter={() =>setIndex(i) 
@@ -98,7 +97,7 @@ const ProductDetails = ({product, products}) =>
     
     
   )
-}
+} 
 
 export const getStaticPaths = async () => {
         const query = `*[_type == "product"]  {
