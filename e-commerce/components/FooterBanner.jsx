@@ -29,5 +29,5 @@ const FooterBanner = ({ footerBanner: { discount, largeText1, largeText2, saleTi
     </div>
   )
 }
-
+  
 export default FooterBanner
