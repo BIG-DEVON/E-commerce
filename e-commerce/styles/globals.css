@@ -479,12 +479,14 @@ padding: 30px 65px;
 .price .old-price, .product-price .old-price, .price .old-price{
   color: gray;
   text-decoration: line-through;
+  
 }
 .product-detail-desc .quantity{
   display: flex;
   gap: 20px;
   margin-top: 10px ;
   align-items: center;
+  
 }
 .product-detail-desc .buttons{
   display: flex;
@@ -529,6 +531,7 @@ padding: 30px 65px;
 .quantity-desc{
   border: 1px solid gray;
 padding: 6px;
+border-radius: 5px;
 }
 .quantity-desc span{
   font-size: 16px;
