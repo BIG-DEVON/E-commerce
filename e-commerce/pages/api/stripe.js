@@ -29,7 +29,7 @@ export default async function handler(req, res){
                     },
                     adjustable_quantity: {
                         enabled: true,
-                        minimum: 1,
+                        minimum: 1, 
                     },
                     quantity:item.quantity
                 }
