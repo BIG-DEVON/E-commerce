@@ -1,7 +1,10 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+import Stripe from 'stripe';
+
+const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY);
 
 export default async function handler(req, res){
   if (req.method === 'POST') {
+    console.log(req.body.cartItems)
 
     try {
         const params = {
@@ -11,16 +14,16 @@ export default async function handler(req, res){
             payment_method_types: ['card'],
             billing_address_collection: 'auto',
             shipping_options: [
-                {shipping_rate: ' shr_1LD8NlFsw5rKEqsXHpspLEHJ'},
+                {shipping_rate: 'shr_1LD8NlFsw5rKEqsXHpspLEHJ'},
                 {shipping_rate: 'shr_1LD8RiFsw5rKEqsXpcuIUd72'},
             ],
-            line_items: req.body.cartItems.map((item) => {
+            line_items: req.body.map((item) => {
                 const img = item.image[0].asset._ref;
-                const newImage = img.replace('image-','https://cdn.sanity.io/images/hql5jx1f/production/' ).replace('-webp', '.webp');
+                const newImage = img.replace('image-','https://cdn.sanity.io/images/cuwqqyie/production/').replace('-webp', '.webp');
                 
                 return {
                     price_data:{
-                        currency:'usd' ,
+                        currency:'usd',
                         product_data: {
                             name: item.name,
                             images:[ newImage],
@@ -28,10 +31,10 @@ export default async function handler(req, res){
                         unit_amount: item.price * 100,
                     },
                     adjustable_quantity: {
-                        enabled: true,
+                        enabled:true,
                         minimum: 1, 
                     },
-                    quantity:item.quantity
+                    quantity: item.quantity
                 }
             }),
             

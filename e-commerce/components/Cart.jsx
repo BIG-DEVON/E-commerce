@@ -16,19 +16,17 @@ import getStripe from '../lib/getStripe';
 const Cart = () => {
   const cartRef = useRef();
   const { totalPrice, totalQuantities, cartItems, setShowCart,
-     toggleCartItemQuanitity, onRemove } = useStateContext();
+  toggleCartItemQuanitity, onRemove } = useStateContext();
 
      const handleCheckout = async () => {
       const stripe = await getStripe();
 
       const response = await fetch('/api/stripe', {
-
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(cartItems),
-
+        body:JSON.stringify(cartItems),
       });
 
       if(response.statusCode === 500) return;
@@ -36,7 +34,7 @@ const Cart = () => {
       const data = await response.json();
 
       toast.loading('Redirecting...');
-      stripe.redirectToCheckout({sessionId: data.id});
+      stripe.redirectToCheckout({ sessionId: data.id});
      }
 
   return (
@@ -46,7 +44,7 @@ const Cart = () => {
       <button 
       type='button'
       className='cart-heading'
-      onClick = { () => setShowCart(false)}>
+      onClick = {() => setShowCart(false)}>
       <AiOutlineLeft />
       <span className='heading'>Your Cart  </span>
       <span className='cart-num-items'> ({totalQuantities }  items) </span>
@@ -82,8 +80,8 @@ const Cart = () => {
                 <div className='flex bottom'>
                 <div>
                 <p className='quantity-desc'> 
-                    <span className='minus' onClick={ () =>
-                    toggleCartItemQuanitity(item._id,'dec') }> 
+                    <span className='minus' onClick={() =>
+                    toggleCartItemQuanitity(item._id,'dec')}> 
                     <AiOutlineMinus /> </span>
                     <span className='num'  onClick="">{item.quantity }</span>
                     <span className=  'plus'   onClick={ () =>
