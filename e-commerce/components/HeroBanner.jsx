@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from "next/link";
 import { urlFor } from '../lib/client';
+import Product from './Product';
+import ProductDetails from '../pages/product/[slug]';
 
 
 const HeroBanner = ({ heroBanner }) => {

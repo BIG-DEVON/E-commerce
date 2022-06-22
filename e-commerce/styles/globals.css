@@ -231,10 +231,13 @@ flex-direction: column;
   background-color: white;
   color: red;
   border: none;
-  margin-top: 40px;
+  margin-top: 1px;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
+  margin-left: 300px;
+
+ 
 }
 .banner-desc .left h3{
   font-weight: 900;

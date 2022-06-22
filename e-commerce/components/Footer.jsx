@@ -17,10 +17,7 @@ const Footer = () => {
     <a href='https://twitter.com/Devon5335'>
     <AiOutlineTwitter />
      </a>
-     <a href='https://github.com/BIG-DEVON'>
-     <AiOutlineGithub />
-
-     </a>
+    
 
     </p>
     
