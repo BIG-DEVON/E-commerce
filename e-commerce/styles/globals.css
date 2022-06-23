@@ -66,7 +66,9 @@ width: 100%;
 }
 .logo{
   color: gray;
-  font-size: 18px;
+  font-size: 40px;
+  font-weight: 800
+ 
 
 }
 .cart-icon{
@@ -220,6 +222,9 @@ flex-direction: column;
   color: white;
   width: 100%;
   margin-top: 120px;
+
+  
+
 }
 .banner-desc{
   display: flex ;
@@ -235,10 +240,19 @@ flex-direction: column;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
-  margin-left: 300px;
-
+  
+} 
+@media screen and (min-width:750px)  {
+  .banner-desc button {
+     margin-left: 475px;
+   }
+ }
  
-}
+
+
+
+
+
 .banner-desc .left h3{
   font-weight: 900;
   font-size: 80px;
@@ -292,7 +306,7 @@ flex-direction: column;
 .footer-container{
   color: #324d67;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 50px;
   padding: 30px 10px;
   font-weight: 700;
   display: flex;

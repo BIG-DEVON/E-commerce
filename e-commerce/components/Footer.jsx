@@ -8,8 +8,6 @@ const Footer = () => {
     <div className='footer-container'>
     <p> © 2022 Devon All rights reserved. </p>
     <p className='icons'>
-
-    
       <a href='https://www.instagram.com/accounts/login/'> 
     <AiFillInstagram />
     </a>
@@ -17,10 +15,8 @@ const Footer = () => {
     <a href='https://twitter.com/Devon5335'>
     <AiOutlineTwitter />
      </a>
-    
 
     </p>
-    
     </div>
   )
 }

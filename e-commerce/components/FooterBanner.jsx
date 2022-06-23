@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import ProductDetails from '../pages/product/[slug]';
-import Product from './Product';
+
 import { urlFor } from '../lib/client';
+import HeroBanner from './HeroBanner';
 
 const FooterBanner = ({ footerBanner: { discount, largeText1, largeText2, saleTime, smallText, midText, desc, product, buttonText, image } }) => {
   return (
@@ -18,9 +18,8 @@ const FooterBanner = ({ footerBanner: { discount, largeText1, largeText2, saleTi
           <p>{smallText}</p>
           <h3>{midText}</h3>
           <p>{desc}</p>
-          
-          <Link href={`/product/${product}`}>
-            <button type="button" >{buttonText}</button>
+          <Link href={`/product/${HeroBanner.product}`}>
+            <button type="button">{ buttonText}</button>
           </Link>
         </div>
 
