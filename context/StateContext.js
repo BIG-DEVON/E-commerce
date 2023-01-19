@@ -2,7 +2,7 @@ import React from "react";
 import { createContext, useContext, useState, useEffect  } from "react";
 import {toast} from 'react-hot-toast'
 
-const Context = createContext();
+const Context = createContext(); 
 
 
 
